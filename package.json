@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/awp-ilin/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/awp-ilin/frontend/issues"
+  },
+  "homepage": "https://gitlab.com/awp-ilin/frontend#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.0.0-rc.1"
+  }
+}
