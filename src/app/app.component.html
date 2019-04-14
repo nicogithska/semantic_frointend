@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>
+  Welcome to {{ title }}!
+</h1>
+<h2>Here are some data from ElasticSearch: </h2>
+<table>
+  <thead style="font-weight:bold;">
+    <td>ID</td>
+    <td>Name</td>
+    <td>Nachname</td>
+  </thead>
+  <tr *ngFor="let profile of profiles">
+    <td>{{profile.id}}</td>
+    <td>{{profile.name}}</td>
+    <td>{{profile.nachname}}</td>
+  </tr>
+</table>
+<router-outlet></router-outlet>
