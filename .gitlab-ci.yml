@@ -9,7 +9,7 @@ _build:
   image: johnpapa/angular-cli
   stage: build
   script:
-   - sed -i 's/const elasticSearchUrl.*/const elasticSearchUrl = \"http:\/\/elasticsearch:9200\";/g' src/app/semanticsearch/semanticsearch.ts # prepare for prod
+#   - sed -i 's/const elasticSearchUrl.*/const elasticSearchUrl = \"http:\/\/elasticsearch:9200\";/g' src/app/semanticsearch/semanticsearch.ts # prepare for prod
    - 'npm install'
    - 'ng build'
   artifacts:
