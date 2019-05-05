@@ -1,0 +1,30 @@
+<header>
+  <div style="padding-top:80px">
+    <h1 class="headingMain">Semantic Search</h1>
+  </div>
+  <div style="height:100px">
+  </div>
+</header>
+<body>
+  <div>
+      <input type="text" name="searchbar" placeholder="Skillbezeichung eingeben" [(ngModel)]="SkillName"/>
+  <div>
+      <button class="addSkillBtn" (click)="addSkill()">Add Skill</button>
+  </div>
+  <div>
+      <button class="searchBtn">Search</button>
+  </div>
+  </div>
+  <div *ngIf="skillService.SkillList.length > 0">
+    <h1 class="skilllist">Skilllist:</h1>
+    <button class="resetBtn" (click)="resetSkills()">Reset</button>
+  </div>
+  <div *ngFor="let skill of skillService.SkillList">
+    <ul>
+      <li>{{ skill }}</li>
+      <button class="removeBtn" (click)="removeSkill(skill)">X</button>
+    </ul>
+  </div>
+  <div style="height:1000px">
+  </div>
+</body>
