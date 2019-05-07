@@ -31,6 +31,7 @@ export class SkillService {
     }
  }
 
+// entfernt immer nur letztes Element --> ÜBERARBEITEN
   removeSkill(skill: Skill) {
     const index = this.skillList.findIndex(s => s === skill.name);
     this.skillList.splice(index, 1);
