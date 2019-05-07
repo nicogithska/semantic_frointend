@@ -1,14 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-//Services
-import { SeamnticSearchService } from './services/semanticsearch/semanticsearch';
+// Services
+import { SeamnticSearchService } from './services/SemanticSearchService/semanticsearch';
 import { SkillService } from './services/SkillService/skill.service';
-//Models
+// Models
 import { Profile } from './models/Profil/profil';
 import { Skill } from './models/Skill/Skill';
-
-
-
-
 
 @Component({
   selector: 'app-root',
@@ -16,14 +12,13 @@ import { Skill } from './models/Skill/Skill';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'SemanticSearch';
   profiles: Profile[];
   @Input() skill: string;
 
 
   constructor(
     private semanticSearchService: SeamnticSearchService,
-    public skillService: SkillService) { }
+    private skillService: SkillService) { }
 
   ngOnInit(): void {
     this.profiles = this.semanticSearchService.search();
@@ -34,13 +29,13 @@ export class AppComponent implements OnInit {
     toBeAddedSkill.name = this.skill;
     this.skillService.addSkill(toBeAddedSkill);
   }
-  
+
   removeSkill(skill: Skill) {
     this.skillService.removeSkill(skill);
   }
-  
+
   resetSkills() {
     this.skillService.resetAll();
   }
-  
+
 }
