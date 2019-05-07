@@ -27,6 +27,13 @@
       </div>
     </ul>
   </div>
+  <div *ngIf="profiles.length > 0">
+    <h1>Results</h1>
+    <ul *ngFor="let profile of profiles">
+      <li>{{ profile.name }}</li>
+      <a routerLink="/details/:id">Details</a>  <!–– routerLink needs to be implemented -->
+    </ul>
+  </div>
   <div style="height:1000px">
   </div>
 </body>
