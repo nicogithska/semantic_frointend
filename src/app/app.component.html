@@ -1,18 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>
-  Welcome to {{ title }}!
-</h1>
-<h2>Here are some data from ElasticSearch for example: </h2>
-<table>
-  <thead style="font-weight:bold;">
-    <td>ID</td>
-    <td>Name</td>
-    <td>Nachname</td>
-  </thead>
-  <tr *ngFor="let profile of profiles">
-    <td>{{profile.id}}</td>
-    <td>{{profile.name}}</td>
-    <td>{{profile.nachname}}</td>
-  </tr>
-</table>
-<router-outlet></router-outlet>
+<header>
+  <div style="padding-top:80px">
+    <h1 class="headingMain">Semantic Search</h1>
+  </div>
+  <div style="height:100px">
+  </div>
+</header>
+<body>
+  <div>
+      <input type="text" name="searchbar" placeholder="Skillbezeichung eingeben" [(ngModel)]="skill"/>
+  </div>
+  <div>
+      <button class="addSkillBtn" (click)="addSkill()">Add Skill</button>
+  </div>
+  <div>
+      <button class="searchBtn">Search</button>
+  </div>
+  <div *ngIf="skillService.skillList.length > 0">
+    <h1 class="skilllist">Skilllist:</h1>
+    <button class="resetBtn" (click)="resetSkills()">Reset</button>
+  </div>
+  <div *ngFor="let skill of skillService.skillList">
+    <ul>
+      <div>
+        <li>{{ skill }}</li>
+        <button class="removeBtn" (click)="removeSkill(skill)">X</button>
+      </div>
+    </ul>
+  </div>
+  <div style="height:1000px">
+  </div>
+</body>
+
