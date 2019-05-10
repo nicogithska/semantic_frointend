@@ -5,11 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SeamnticSearchService } from './services/SemanticSearchService/semanticsearch';
+import { SeamnticSearchService } from './services/SemanticSearchService/semanticsearch.service';
 import { SkillService } from './services/SkillService/skill.service';
+import { HeaderComponent } from './components/header/header/header.component';
+import { BodyComponent } from './components/body/body/body.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
