@@ -3,30 +3,30 @@
       <input type="text" name="searchbar" placeholder="Skillbezeichung eingeben" [(ngModel)]="skill"/>
   </div>
   <div>
-      <button class="addSkillBtn" (click)="addSkill()">Add Skill</button>
+      <button class="addSkillBtn btn btn-primary" (click)="addSkill()">Add Skill</button>
   </div>
   <div>
-      <button class="searchBtn">Search</button>
+      <button class="searchBtn btn btn-primary">Search</button>
   </div>
   <div *ngIf="skillService.skillList.length > 0">
     <h1 class="skilllist">Skilllist:</h1>
-    <button class="resetBtn" (click)="resetSkills()">Reset</button>
+    <button class="resetBtn btn btn-primary" (click)="resetSkills()">Reset</button>
   </div>
   <div *ngFor="let skill of skillService.skillList">
     <ul>
       <div>
         <li>{{ skill }}</li>
-        <button class="removeBtn" (click)="removeSkill(skill)">X</button>
+        <button class="removeBtn btn btn-danger" (click)="removeSkill(skill)">x</button>
       </div>
     </ul>
   </div>
-  <!-- <div *ngIf="profiles.length > 0">
+  <div *ngIf="profiles.length > 0">
     <h1>Results</h1>
     <ul *ngFor="let profile of profiles">
       <li>{{ profile.name }}</li>
-      <a routerLink="/details/:id">Details</a>  <!–– routerLink needs to be implemented
+      <a routerLink="/details/:id">Details</a> 
     </ul>
-  </div> -->
+  </div>
   <div style="height:1000px">
   </div>
 </body>

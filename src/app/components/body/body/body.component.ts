@@ -31,7 +31,7 @@ export class BodyComponent implements OnInit {
     this.skillService.addSkill(toBeAddedSkill);
   }
 
-  removeSkill(skill: Skill) {
+  removeSkill(skill: string) {
     this.skillService.removeSkill(skill);
   }
 
