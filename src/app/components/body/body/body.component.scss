@@ -1,77 +1,49 @@
-img {
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-  }
-  
-  .resize {
-    width: 300px;
-    height: auto;
-  }
-  
-  input {
-    width: 60%;
-    height: 2em;
-    margin-left: 130px;
-    margin-right: 20px;
-    display: block;
-    float: left;
-  }
-  
-  .addSkillBtn {
-    width: 10%;
-    height: 33px;
-    color: white;
-    float: left;
-    margin-right: 20px;
-    border-radius: 2px;
-  }
-  
-  .searchBtn {
-    width: 10%;
-    height: 33px;
-    color: white;
-    border-radius: 2px;
-  }
-  
-  li {
-    float: left;
-    list-style-type: none;
-    margin-right: 20 px;
-  }
-  
-  ul {
-    margin-left: 420px;
-    float: left;
-  }
-  
-  .skilllist {
-    margin-left: 395px;
-    color: white;
-  }
-  
-  .resetBtn {
-    margin-left: 1172px;
-    margin-top: 20px;
-    width: 10%;
-    height: 33px;
-    color: white;
-    float: left;
-    border-radius: 4px;
-  }
-  
-  .removeBtn {
-    color: black;
-    border-radius: 8px;
-    height: 38px;
-    width: 35px;
-  }
+#searchbar {
+  margin-top: -10px;
+}
 
-  #skillbox {
-    margin-right: 700px;
-    margin-top: 80px;
-  }
+#addSkillBtn {
+  color: white;
+  margin-left: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: -10px;
+}
+
+#searchBtn {
+  color: white;
+  padding-right: 65px;
+  padding-left: 65px;
+  padding-bottom: 10px; 
+  padding-top: 10px;
+  margin-top: -10px;
+}
+
+#skillcontainer {
+  margin-top: 25px;
+}
+
+#headingSkill {
+  color: white;
+  font-size: 40px;
+}
+
+#resetBtn {
+  color: white;
+  margin-left: 665px;
+  padding-right: 55px;
+  padding-left: 55px;
+}
+
+#skill {
+  float: left;
+  list-style-type: none;
+}
+
+#removeBtn {
+  
+}
+
+#placeholder {
+  height: 50px;
+}

@@ -1,28 +1,37 @@
 <body>
   <div class="container">
-      <input type="text" name="searchbar" placeholder="Skillbezeichung eingeben" [(ngModel)]="skill"/>
-  </div>
-  <div class="container">
-      <button class="addSkillBtn btn btn-primary font-weight-bold btn-outline-success" (click)="addSkill()">Add Skill</button>
-  </div>
-  <div class="container">
-      <button class="searchBtn btn btn-primary font-weight-bold btn-outline-success">Search</button>
-  </div>
-  <div class="container-fluid col-8" id="skillbox">
-      <div *ngIf="skillService.skillList.length > 0">
-        <h1 class="skilllist font-weight-bold">Skilllist</h1>
-        <button class="resetBtn btn btn-primary font-weight-bold btn-outline-danger" (click)="resetSkills()">Reset</button>
+    <div class="row">
+      <div class="col-9">
+          <input id="searchbar" class="form-control" type="text" placeholder="Skillbezeichung eingeben" [(ngModel)]="skill"/>
       </div>
+      <div class="col-2">
+          <button id="addSkillBtn" class="btn btn-primary font-weight-bold btn-outline-success" (click)="addSkill()">Add Skill</button>
+      </div>
+      <div class="col-1">
+          <button id="searchBtn" class="btn btn-primary font-weight-bold btn-outline-info">Search</button>
+      </div>
+    </div>
+  </div>
+  <div id="skillcontainer" class="container" *ngIf="skillService.skillList.length > 0">
+    <div class="row">
+      <div class="col-4">
+        <i><h1 id="headingSkill" class="font-weight-bold">Skills</h1></i>
+      </div>
+      <div class="col-8">
+        <button id="resetBtn" class="btn btn-primary font-weight-bold btn-outline-danger" (click)="resetSkills()">Reset</button>
+      </div>
+      <div id="placeholder" class="container"></div>
       <div *ngFor="let skill of skillService.skillList">
         <div>
           <ul>
             <div>
-              <li><label class="btn btn-primary font-weight-bold">{{ skill }}</label></li>
-              <button class="removeBtn btn btn-danger font-weight-bold" (click)="removeSkill(skill)">X</button>
+              <li id="skill"><label class="btn btn-primary font-weight-bold">{{ skill }}</label></li>
+              <button id="removeBtn" class="btn btn-danger font-weight-bold" (click)="removeSkill(skill)">X</button>
             </div>
           </ul>
         </div>
       </div>
+    </div>
   </div>
   <div *ngIf="profiles.length > 0">
     <h1>Results</h1>
