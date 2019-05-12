@@ -4,7 +4,13 @@ import { DetailsProfileComponent } from './components/body/details-profile/detai
 
 const routes: Routes = [{
   path: 'details/:id', component: DetailsProfileComponent
-}];
+},
+/*
+{
+  path: '**', component: NotYetImplementedComponent
+}
+*/
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
