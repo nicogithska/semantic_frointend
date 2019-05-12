@@ -31,7 +31,6 @@ export class SkillService {
     }
  }
 
-// entfernt immer nur letztes Element --> ÜBERARBEITEN
   removeSkill(skill: string) {
     const newSkills = [];
     this.skillList.forEach(s => {

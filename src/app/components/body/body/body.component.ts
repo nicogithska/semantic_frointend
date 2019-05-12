@@ -14,8 +14,7 @@ import { Skill } from '../../../models/Skill/Skill';
 export class BodyComponent implements OnInit {
 
   profiles: Profile[];
-  @Input() skill: string;
-
+  skill: string;
 
   constructor(
     private semanticSearchService: SeamnticSearchService,
