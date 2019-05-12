@@ -5,10 +5,10 @@
           <input id="searchbar" class="form-control" type="text" placeholder="Skillbezeichung eingeben" [(ngModel)]="skill"/>
       </div>
       <div class="col-2">
-          <button id="addSkillBtn" class="btn btn-primary font-weight-bold btn-outline-success" (click)="addSkill()">Add Skill</button>
+          <button id="addSkillBtn" class="btn btn-primary font-weight-bold btn-outline-success" (click)="addSkill()">ADD</button>
       </div>
       <div class="col-1">
-          <button id="searchBtn" class="btn btn-primary font-weight-bold btn-outline-info">Search</button>
+          <button id="searchBtn" class="btn btn-primary font-weight-bold btn-outline-info">SEARCH</button>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
         <i><h1 id="headingSkill" class="font-weight-bold">Skills</h1></i>
       </div>
       <div class="col-8">
-        <button id="resetBtn" class="btn btn-primary font-weight-bold btn-outline-danger" (click)="resetSkills()">Reset</button>
+        <button id="resetBtn" class="btn btn-primary font-weight-bold btn-outline-danger" (click)="resetSkills()">RESET</button>
       </div>
       <div id="placeholder" class="container"></div>
       <div *ngFor="let skill of skillService.skillList">
