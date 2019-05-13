@@ -14,6 +14,7 @@ import { Skill } from '../../../models/Skill/Skill';
 })
 export class BodyComponent implements OnInit {
 
+ /*
   test: Profile = {
     id: 1,
     name: 'joe',
@@ -25,8 +26,8 @@ export class BodyComponent implements OnInit {
     name: 'hans',
     nachname: 'johann'
   };
-
-  profiles: Profile[] = [this.test, this.test2];
+*/
+  profiles: Profile[];
   skill: string;
 
   constructor(
@@ -35,7 +36,7 @@ export class BodyComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    //this.profiles = this.semanticSearchService.search();
+    this.profiles = this.semanticSearchService.search();
   }
 
   addSkill() {
