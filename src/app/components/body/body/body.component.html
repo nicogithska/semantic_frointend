@@ -33,12 +33,27 @@
       </div>
     </div>
   </div>
-  <div *ngIf="profiles.length > 0">
-    <h1>Results</h1>
-    <ul *ngFor="let profile of profiles">
-      <li>{{ profile.name }}</li>
-      <a routerLink="/details/:id">Details</a> 
-    </ul>
+  <div class="container">
+    <div class="col-12" *ngIf="profiles.length > 0">
+      <i><h1>Results ({{ profiles.length }})</h1></i>
+    </div>
+  </div>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NAME</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let profil of profiles">
+        <tr>
+          <th>{{ profil.id }}</th>
+          <th>{{ profil.name }}</th>
+          <th><a (click)="onClick(profil.id)" class="btn btn-primary" [routerLink]="['/details', profil.id]">Details</a></th>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 

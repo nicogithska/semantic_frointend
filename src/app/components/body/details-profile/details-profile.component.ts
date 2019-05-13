@@ -10,6 +10,7 @@ export class DetailsProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

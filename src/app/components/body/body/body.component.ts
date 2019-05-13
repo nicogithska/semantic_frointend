@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 // Services
 import { SeamnticSearchService } from '../../../services/SemanticSearchService/semanticsearch.service';
 import { SkillService } from '../../../services/SkillService/skill.service';
@@ -13,21 +14,35 @@ import { Skill } from '../../../models/Skill/Skill';
 })
 export class BodyComponent implements OnInit {
 
-  profiles: Profile[];
+  test: Profile = {
+    id: 1,
+    name: 'hans',
+    nachname: 'johann'
+  };
+
+  test2: Profile = {
+    id: 2,
+    name: 'hans',
+    nachname: 'johann'
+  };
+
+  profiles: Profile[] = [this.test, this.test2];
   skill: string;
 
   constructor(
     private semanticSearchService: SeamnticSearchService,
-    private skillService: SkillService) { }
+    private skillService: SkillService,
+    private router: Router) { }
 
   ngOnInit(): void {
-    this.profiles = this.semanticSearchService.search();
+    //this.profiles = this.semanticSearchService.search();
   }
 
   addSkill() {
     let toBeAddedSkill = new Skill();
     toBeAddedSkill.name = this.skill;
     this.skillService.addSkill(toBeAddedSkill);
+    console.log(this.profiles.length);
   }
 
   removeSkill(skill: string) {
@@ -36,5 +51,9 @@ export class BodyComponent implements OnInit {
 
   resetSkills() {
     this.skillService.resetAll();
+  }
+
+  onClick(id: number) {
+    this.router.navigate(['/details', id]);
   }
 }

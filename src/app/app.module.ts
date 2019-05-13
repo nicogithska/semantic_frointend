@@ -9,7 +9,9 @@ import { SeamnticSearchService } from './services/SemanticSearchService/semantic
 import { SkillService } from './services/SkillService/skill.service';
 import { HeaderComponent } from './components/header/header/header.component';
 import { BodyComponent } from './components/body/body/body.component';
-import { DetailsProfileComponent } from './components/body/details-profile/details-profile.component';
+import { DetailsProfileComponent } from './components/body/details-profile/details-profile.component'; 
+
+
 
 @NgModule({
   declarations: [
