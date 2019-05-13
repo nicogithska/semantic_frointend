@@ -16,8 +16,8 @@ export class BodyComponent implements OnInit {
 
   test: Profile = {
     id: 1,
-    name: 'hans',
-    nachname: 'johann'
+    name: 'joe',
+    nachname: 'doe'
   };
 
   test2: Profile = {
