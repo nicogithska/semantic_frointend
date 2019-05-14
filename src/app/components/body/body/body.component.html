@@ -50,11 +50,7 @@
         <tr>
           <th>{{ profil.id }}</th>
           <th>{{ profil.name }}</th>
-<<<<<<< HEAD
-          <th><a (click)="onClick(profil.id)" class="btn btn-primary">Details</a></th>
-=======
           <th><a class="btn btn-primary" [routerLink]="['/details', profil.id]">Details</a></th>
->>>>>>> f4837ad862434bb43e27c13fe2fac7deda3e0cc7
         </tr>
       </tbody>
     </table>
