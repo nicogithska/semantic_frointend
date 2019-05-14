@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// Routing
 import { Router } from '@angular/router';
 // Services
 import { SeamnticSearchService } from '../../../services/SemanticSearchService/semanticsearch.service';
@@ -14,7 +15,7 @@ import { Skill } from '../../../models/Skill/Skill';
 })
 export class BodyComponent implements OnInit {
 
- /*
+  /*
   test: Profile = {
     id: 1,
     name: 'joe',
@@ -26,7 +27,9 @@ export class BodyComponent implements OnInit {
     name: 'hans',
     nachname: 'johann'
   };
-*/
+  profiles: Profile[] = [this.test, this.test2];
+  */
+
   profiles: Profile[];
   skill: string;
 
