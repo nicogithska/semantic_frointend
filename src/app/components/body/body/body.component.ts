@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// Routing
 import { Router } from '@angular/router';
 // Services
 import { SeamnticSearchService } from '../../../services/SemanticSearchService/semanticsearch.service';
@@ -14,7 +15,11 @@ import { Skill } from '../../../models/Skill/Skill';
 })
 export class BodyComponent implements OnInit {
 
+<<<<<<< HEAD
  
+=======
+  /*
+>>>>>>> f4837ad862434bb43e27c13fe2fac7deda3e0cc7
   test: Profile = {
     id: 1,
     name: 'joe',
@@ -26,8 +31,15 @@ export class BodyComponent implements OnInit {
     name: 'hans',
     nachname: 'johann'
   };
+<<<<<<< HEAD
 
   profiles: Profile[] = [this.test, this.test2];
+=======
+  profiles: Profile[] = [this.test, this.test2];
+  */
+
+  profiles: Profile[];
+>>>>>>> f4837ad862434bb43e27c13fe2fac7deda3e0cc7
   skill: string;
 
   constructor(
@@ -54,7 +66,4 @@ export class BodyComponent implements OnInit {
     this.skillService.resetAll();
   }
 
-  onClick(id: number) {
-    this.router.navigate(['/details', id]);
-  }
 }
