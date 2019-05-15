@@ -1,6 +1,39 @@
 <body>
-  <p>
-    details-profile works!
-  </p>
-  <a class="btn btn-primary" href="/">Home</a>
+  <div class="container">
+    <i><h1 id="detailsHeading" class="font-weight-bold">Detailansicht</h1></i>
+  </div>
+  <div id="detailsPlaceholder"></div>
+  <div class="container">
+    <h1 id="headingprofile">ID</h1>
+  </div>
+  <div id="detailbody" class="container border border-dark rounded">
+    <div class="container">
+      <div>
+        <p id="paragraphProfil">PROFILE_ID_PLACEHOLDER</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <h1 id="headingprofile">NAME</h1>
+    </div>
+  <div id="detailbody" class="container border border-dark rounded">
+    <div class="container">
+      <div>
+        <p id="paragraphProfil">PROFILE_NAME_PLACEHOLDER</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <h1 id="headingprofile">NACHNAME</h1>
+    </div>
+  <div id="detailbody" class="container border border-dark rounded">
+    <div class="container">
+      <div>
+        <p id="paragraphProfil">PROFILE_NACHNAME_PLACEHOLDER</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <a id="homeBtn" class="btn btn-primary" [routerLink]="['']">Back</a>
+  </div>
 </body>

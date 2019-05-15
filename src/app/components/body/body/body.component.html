@@ -8,7 +8,7 @@
           <button id="addSkillBtn" class="btn btn-primary font-weight-bold btn-outline-success" (click)="addSkill()">ADD</button>
       </div>
       <div class="col-1">
-          <button id="searchBtn" class="btn btn-primary font-weight-bold btn-outline-info">SEARCH</button>
+          <button id="searchBtn" class="btn btn-primary font-weight-bold btn-outline-info" (click)="search()">SEARCH</button>
       </div>
     </div>
   </div>
@@ -26,34 +26,40 @@
           <ul>
             <div>
               <li id="skill"><label class="btn btn-primary font-weight-bold border-secondary rounded-left">{{ skill }}</label></li>
-              <button id="removeBtn" class="btn btn-danger font-weight-bold border rounded" (click)="removeSkill(skill)">X</button>
+              <button id="removeBtn" class="btn btn-danger font-weight-bold border rounded" (click)="removeSkill(skill)">x</button>
             </div>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  <div id="placeholder"></div>
   <div class="container">
     <div class="col-12" *ngIf="profiles.length > 0">
-      <i><h1>Results ({{ profiles.length }})</h1></i>
+      <i><h1 id="resultsHeading" class="font-weight-bold">Results ({{ profiles.length }})</h1></i>
     </div>
   </div>
-  <div class="container" *ngIf="profiles.length > 0">
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">NAME</th>
-        </tr>
-      </thead>
-      <tbody *ngFor="let profil of profiles">
-        <tr>
-          <th>{{ profil.id }}</th>
-          <th>{{ profil.name }}</th>
-          <th><a class="btn btn-primary" [routerLink]="['/details', profil.id]">Details</a></th>
-        </tr>
-      </tbody>
-    </table>
+  <div id="placeholder"></div>
+  <div id="resultBox" class="container" *ngIf="profiles.length > 0">
+    <div class="row">
+      <div class="col-1"></div>
+      <table id="resultTable" class="col-10 table table-striped table-hover table-active">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let profil of profiles">
+          <tr>
+            <th>{{ profil.id }}</th>
+            <th>{{ profil.name }}</th>
+            <a id="detailsBtn" class="btn btn-primary" [routerLink]="['/details', profil.id]">Details</a>
+            <div id="placeholderResult"></div>
+          </tr>
+        </tbody>
+      </table>
+      <div class="col-1"></div>
+    </div>
   </div>
 </body>
-

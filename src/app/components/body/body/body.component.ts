@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-// Routing
-import { Router } from '@angular/router';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 // Services
 import { SeamnticSearchService } from '../../../services/SemanticSearchService/semanticsearch.service';
 import { SkillService } from '../../../services/SkillService/skill.service';
 // Models
 import { Profile } from '../../../models/Profil/profil';
 import { Skill } from '../../../models/Skill/Skill';
+
 
 @Component({
   selector: 'app-body',
@@ -15,38 +14,49 @@ import { Skill } from '../../../models/Skill/Skill';
 })
 export class BodyComponent implements OnInit {
 
-  /*
+/*
   test: Profile = {
     id: 1,
     name: 'joe',
-    nachname: 'doe'
+    nachname: 'doe',
   };
 
   test2: Profile = {
     id: 2,
     name: 'hans',
-    nachname: 'johann'
+    nachname: 'johann',
   };
-  profiles: Profile[] = [this.test, this.test2];
-  */
+
+  test3: Profile = {
+    id: 3,
+    name: 'hans',
+    nachname: 'johann',
+  };
+
+  test4: Profile = {
+    id: 4,
+    name: 'hans',
+    nachname: 'johann',
+  };
+
+  profiles: Profile[] = [this.test, this.test2, this.test3, this.test4];
+*/
 
   profiles: Profile[];
   skill: string;
 
   constructor(
     private semanticSearchService: SeamnticSearchService,
-    private skillService: SkillService,
-    private router: Router) { }
+    private skillService: SkillService) { }
 
   ngOnInit(): void {
-    //this.profiles = this.semanticSearchService.search();
+    this.profiles = this.semanticSearchService.search();
   }
 
   addSkill() {
     let toBeAddedSkill = new Skill();
     toBeAddedSkill.name = this.skill;
     this.skillService.addSkill(toBeAddedSkill);
-    console.log(this.profiles.length);
   }
 
   removeSkill(skill: string) {
@@ -57,4 +67,9 @@ export class BodyComponent implements OnInit {
     this.skillService.resetAll();
   }
 
+  search () {
+    console.log('Will work soon :^) !');
+  }
+
 }
+
